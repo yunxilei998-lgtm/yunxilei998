@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflections on Responsibility and Sustainability in Digital Culture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D5B89',
+                        secondary: '#4A90E2',
+                        accent: '#78A6D8',
+                        light: '#F5F7FA',
+                        dark: '#1E2A38',
+                        neutral: '#E1E5EB'
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+                        sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .section-fade {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease, transform 0.6s ease;
+            }
+            .section-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .reference-item {
+                position: relative;
+                padding-left: 1.5rem;
+            }
+            .reference-item::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0.5rem;
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 50%;
+                background-color: #4A90E2;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light text-dark font-sans">
+    <!-- Header with Navigation -->
+    <header class="bg-primary text-white shadow-md sticky top-0 z-50 transition-all duration-300" id="main-header">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold mb-3 md:mb-0">
+                <i class="fa fa-bookmark mr-2"></i>Digital Culture Reflections
+            </h1>
+            <nav class="w-full md:w-auto">
+                <ul class="flex flex-wrap justify-center gap-2 md:gap-4 text-sm md:text-base">
+                    <li><a href="#introduction" class="px-3 py-2 rounded hover:bg-secondary transition-colors duration-200"><i class="fa fa-home mr-1"></i>Introduction</a></li>
+                    <li><a href="#ai-dualism" class="px-3 py-2 rounded hover:bg-secondary transition-colors duration-200"><i class="fa fa-microchip mr-1"></i>AI Dualism</a></li>
+                    <li><a href="#dhcc" class="px-3 py-2 rounded hover:bg-secondary transition-colors duration-200"><i class="fa fa-leaf mr-1"></i>DHCC</a></li>
+                    <li><a href="#open-knowledge" class="px-3 py-2 rounded hover:bg-secondary transition-colors duration-200"><i class="fa fa-globe mr-1"></i>Open Knowledge</a></li>
+                    <li><a href="#conclusion" class="px-3 py-2 rounded hover:bg-secondary transition-colors duration-200"><i class="fa fa-check-circle mr-1"></i>Conclusion</a></li>
+                    <li><a href="#references" class="px-3 py-2 rounded hover:bg-secondary transition-colors duration-200"><i class="fa fa-book mr-1"></i>References</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-12 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">Reflections on Responsibility and Sustainability in Digital Culture</h1>
+            <p class="text-xl md:text-2xl font-light mb-8 text-balance">From AI Systems to Open Knowledge</p>
+            <div class="flex justify-center gap-4">
+                <a href="#introduction" class="bg-white text-primary px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all duration-300 shadow-lg">
+                    <i class="fa fa-arrow-down mr-2"></i>Begin Reading
+                </a>
+                <a href="#references" class="bg-transparent border-2 border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition-all duration-300">
+                    <i class="fa fa-list mr-2"></i>View References
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto">
+            <!-- Introduction Section -->
+            <section id="introduction" class="mb-16 section-fade">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                        <i class="fa fa-home text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">Introduction</h2>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                    <p class="mb-4 text-lg leading-relaxed">
+                        This portfolio weaves three interconnected strands of reflection, shaped by key texts, movements, and narratives from my MA programme. The first strand emerges from weekly engagements with <em>Anatomy of an AI System</em> (Crawford & Joler, 2018), challenging me to reposition AI as materially embedded infrastructure rather than abstract technology, while probing digital methodologies for climate equity.
+                    </p>
+                    <p class="mb-4 text-lg leading-relaxed">
+                        The second strand is informed by the Digital Humanities Climate Coalition’s (DHCC) <em>Statement on Open Data</em> (2021), which awakened me to the environmental footprint of digital scholarship and the imperative of sustainable research practices. The third strand traces reflections on open knowledge ethics, inspired by Aaron Swartz’s activism as portrayed in <em>The Internet’s Own Boy</em> (Knappenberger, 2014), and explores how open access regulations can transform educational equity through scientific rigor.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Prior to these engagements, I regarded AI and technological innovations—from Tesla’s electric vehicles to consumer electronics—as neutral triumphs of human ingenuity, designed to benefit society. <em>Anatomy of an AI System</em> shattered this illusion, revealing the extractive violence, resource depletion, and electronic waste inherent in even “sustainable” technologies. Similarly, the DHCC’s work exposed a blind spot: humanities research, often framed as low-impact, relies on energy-intensive servers and cloud computing that contribute to carbon emissions—emissions that scholars have a responsibility to acknowledge and mitigate.
+                    </p>
+                </div>
+            </section>
+
+            <!-- AI Dualism Section -->
+            <section id="ai-dualism" class="mb-16 section-fade">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4">
+                        <i class="fa fa-microchip text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">The Environmental Dualism of AI Systems</h2>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                    <p class="mb-4 text-lg leading-relaxed">
+                        AI is widely hailed as a critical tool for addressing climate change, from optimizing renewable energy grids to modeling deforestation (Sabeena, 2025). Yet this framing obscures a fundamental dualism: AI’s potential to advance sustainability is inseparable from its role as a driver of environmental harm.
+                    </p>
+                    
+                    <div class="my-8 bg-neutral bg-opacity-30 rounded-lg p-6 border-l-4 border-secondary">
+                        <blockquote class="text-lg italic text-dark">
+                            "Artificial intelligence may assist us not only practically but also play an essential social role for individuals in advancing initiatives against a changing climate. Through learning algorithms such as machine learning or deep learning, artificial intelligence helps leaders develop long-term planning for global climate change, focusing appropriately on aspects such as social inequality, economic prosperity development, environmental protection, and sustainable resource planning."
+                            <footer class="mt-2 text-sm text-primary">— Sabeena (2025, p. 390)</footer>
+                        </blockquote>
+                    </div>
+
+                    <p class="mb-4 text-lg leading-relaxed">
+                        Crawford and Joler (2018) vividly illustrate this paradox through their anatomy of the Amazon Echo: its “intelligence” depends on extracting rare earth minerals, manufacturing in energy-intensive factories, and operating on servers powered by non-renewable energy. As Konya and Nematzadeh (2023) note, data centers—essential for AI’s computing power—remain heavily reliant on coal and other fossil fuels, undermining the very sustainability AI purports to enable.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        This dualism extends beyond resource extraction to systemic inequity. Sabeena (2025) argues that AI’s climate solutions must center “social inequality, economic prosperity, and sustainable resource planning” (p. 390), yet AI’s development often exploits marginalized communities: extractive industries for rare earth minerals disproportionately harm Indigenous lands, while the energy demands of AI infrastructure exacerbate environmental injustice in regions where fossil fuel plants are sited.
+                    </p>
+                </div>
+            </section>
+
+            <!-- DHCC Section -->
+            <section id="dhcc" class="mb-16 section-fade">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                        <i class="fa fa-leaf text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">Sustainable Digital Scholarship and the DHCC</h2>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                    <p class="mb-4 text-lg leading-relaxed">
+                        The DHCC’s work has been transformative in reframing digital humanities as a site of environmental responsibility. Founded to address the “carbon burden” of digital research (Little et al., 2025), the coalition advocates for three core principles: minimizing energy consumption, prioritizing open and transparent practices, and centering climate justice in digital projects.
+                    </p>
+
+                    <div class="grid md:grid-cols-3 gap-4 my-8">
+                        <div class="bg-primary bg-opacity-10 rounded-lg p-5 text-center hover:shadow-md transition-shadow duration-300">
+                            <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa fa-bolt text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">Minimize Energy Use</h3>
+                            <p class="text-sm">Optimize data storage, use energy-efficient platforms, and reduce redundant computing</p>
+                        </div>
+                        <div class="bg-primary bg-opacity-10 rounded-lg p-5 text-center hover:shadow-md transition-shadow duration-300">
+                            <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa fa-eye text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">Transparency</h3>
+                            <p class="text-sm">Document carbon footprints and make sustainability practices visible in research</p>
+                        </div>
+                        <div class="bg-primary bg-opacity-10 rounded-lg p-5 text-center hover:shadow-md transition-shadow duration-300">
+                            <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa fa-share-alt text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">Open Practices</h3>
+                            <p class="text-sm">Promote open access to reduce environmental impact of knowledge dissemination</p>
+                        </div>
+                    </div>
+
+                    <p class="mb-4 text-lg leading-relaxed">
+                        For me, this meant confronting the environmental impact of my own scholarly work—from maintaining a GitHub page to storing research data on cloud servers. As Little et al. (2025) argue, even “small” digital practices (e.g., hosting websites, sharing large datasets) accumulate into significant carbon emissions when scaled across the discipline.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        The DHCC’s <em>Guidelines for Sustainable Digital Practice</em> (2021) provided actionable steps to mitigate this impact: using self-hosted, energy-efficient platforms like Reclaim Hosting instead of commercial cloud services; compressing data to reduce storage needs; and publishing open access materials to avoid redundant reproduction of research. These practices are not merely technical—they are ethical.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Open Knowledge Section -->
+            <section id="open-knowledge" class="mb-16 section-fade">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                        <i class="fa fa-globe text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">Ethics of Open Knowledge and Digital Responsibility</h2>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                    <p class="mb-4 text-lg leading-relaxed">
+                        Aaron Swartz’s activism, as documented in <em>The Internet’s Own Boy</em>, redefined my understanding of open knowledge as a practice of justice. Swartz’s attempt to download millions of JSTOR articles (Lessig, 2004) was not merely a protest against paywalls but a demand for knowledge as a public good—one that should be accessible to all, regardless of ability to pay.
+                    </p>
+
+                    <div class="my-8 bg-secondary bg-opacity-10 rounded-lg p-6 border-l-4 border-primary">
+                        <blockquote class="text-lg italic text-dark">
+                            "Digital ethics is deeply embedded within rhetorical contexts… how users participate online and through digital media has the potential to shape the norms, laws, and practices that will determine the future of the social web and digital data."
+                            <footer class="mt-2 text-sm text-primary">— Reyman and Sparby (2020, p. 2)</footer>
+                        </blockquote>
+                    </div>
+
+                    <p class="mb-4 text-lg leading-relaxed">
+                        Yet Luke (2018) warns against romanticizing openness as a panacea: “algorithmic infrastructures embed power dynamics that amplify some voices while excluding others” (p. 187). Openness, in other words, is not inherently equitable; it requires intentional design to challenge, rather than reproduce, systemic inequalities.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Swartz’s legacy also highlights the intersection of open knowledge and sustainability. As the DHCC (2021) notes, “sustainability requires a commitment beyond merely producing tangible things, including cultivating a culture of openness” (p. 7). Open access, for example, reduces the environmental cost of printing and distributing physical books and journals, while also promoting equity by making scholarship accessible to researchers in low-resource contexts.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Conclusion Section -->
+            <section id="conclusion" class="mb-16 section-fade">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4">
+                        <i class="fa fa-check-circle text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">Conclusion</h2>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                    <p class="mb-4 text-lg leading-relaxed">
+                        This reflection has been shaped by a core insight: digital culture is inherently material. AI systems are not abstract algorithms but networks of extraction, labor, and energy; digital scholarship leaves carbon footprints that reverberate across planetary systems; open knowledge is not a neutral ideal but a material practice that shapes power and equity.
+                    </p>
+                    <p class="mb-4 text-lg leading-relaxed">
+                        My journey from viewing technology as neutral to recognizing its embeddedness in social and environmental systems has been driven by three key interventions: Crawford and Joler’s (2018) materialist critique of AI, the DHCC’s (2021) call for sustainable digital practice, and Swartz’s (2014) activism for open knowledge justice.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Together, these interventions point to a vision of digital culture rooted in responsibility: responsibility to the planet, by minimizing extractive practices and carbon emissions; responsibility to communities, by centering equity in AI development and knowledge access; and responsibility to future generations, by building sustainable infrastructures that prioritize long-term well-being over short-term innovation. For digital humanists, this means rejecting the myth of technological neutrality and embracing a critical, reflective practice—one that interrogates the material consequences of our tools, the environmental costs of our research, and the power dynamics of our knowledge production.
+                    </p>
+                </div>
+            </section>
+
+            <!-- References Section -->
+            <section id="references" class="mb-16 section-fade">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                        <i class="fa fa-book text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">References</h2>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                    <ul class="space-y-4">
+                        <li class="reference-item">
+                            Crawford, K., & Joler, V. (2018). <em>Anatomy of an AI System: The Amazon Echo as an Anatomical Map of Human Labor, Data and Planetary Resources</em>. Retrieved from https://anatomyof.ai/
+                        </li>
+                        <li class="reference-item">
+                            Digital Humanities Climate Coalition (DHCC). (2021). <em>Guidelines for Sustainable Digital Practice</em>. Retrieved from https://www.sas.ac.uk/dhcc
+                        </li>
+                        <li class="reference-item">
+                            Knappenberger, B. (Director). (2014). <em>The Internet’s Own Boy: The Story of Aaron Swartz</em> [Film]. FilmBuff.
+                        </li>
+                        <li class="reference-item">
+                            Konya, A., & Nematzadeh, M. (2023). Recent applications of AI to environmental disciplines: A review. <em>Science of The Total Environment</em>, 904, 167705.
+                        </li>
+                        <li class="reference-item">
+                            Lessig, L. (2004). <em>Free Culture: How Big Media Uses Technology and the Law to Lock Down Culture and Control Creativity</em>. Penguin Press.
+                        </li>
+                        <li class="reference-item">
+                            Little, H., Hayes, I., Baker, J., Otty, L., Walton, J. L., & Ohge, C. (2025). <em>Interpreting UKRI Environmental Sustainability Guidance for the Digital Humanities</em>. Digital Humanities Climate Coalition. https://doi.org/10.5281/zenodo.15312177
+                        </li>
+                        <li class="reference-item">
+                            Luke, A. (2018). Digital ethics now. <em>Language and Literacy</em>, 20(3), 185–198.
+                        </li>
+                        <li class="reference-item">
+                            Reyman, J., & Sparby, E. M. (Eds.). (2020). <em>Digital Ethics: Rhetoric and Responsibility in Online Aggression</em>. Routledge.
+                        </li>
+                        <li class="reference-item">
+                            Sabeena, J. (2025). The AI Advantage: Catalyst for Environmental, Social, and Business Sustainability. In A. Al Qamashoui & N. Al Baimani (Eds.), <em>AI Integration for Business Sustainability</em> (pp. 387–404). Springer.
+                        </li>
+                        <li class="reference-item">
+                            Tsay, J., Dabbish, L., & Herbsleb, J. (2014). Influence of social and technical factors for evaluating contribution in GitHub. In <em>Proceedings of the 36th International Conference on Software Engineering (ICSE ’14)</em> (pp. 356–366). ACM.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                    <h2 class="text-xl font-bold mb-4 md:mb-0">Reflections on Digital Culture</h2>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-200">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-200">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-200">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                    <p>&copy; 2025 Digital Culture Reflections. All rights reserved.</p>
+                    <p class="mt-2 text-sm">Created with <i class="fa fa-heart text-red-500"></i> for responsible digital practice</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-secondary">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in sections
+        const sections = document.querySelectorAll('.section-fade');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Initial check for sections in viewport
+        document.addEventListener('DOMContentLoaded', () => {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    section.classList.add('section-visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
