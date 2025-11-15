@@ -19,8 +19,8 @@
                         neutral: '#E1E5EB'
                     },
                     fontFamily: {
-                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
-                        sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif']
+                        serif: ['Times New Roman', 'Georgia', 'Cambria', 'serif'],
+                        sans: ['Times New Roman', 'Georgia', 'Cambria', 'serif'] // 统一为新罗马字体
                     },
                 }
             }
@@ -54,11 +54,26 @@
                 border-radius: 50%;
                 background-color: #4A90E2;
             }
+            .img-caption {
+                font-size: 0.9rem;
+                color: #666;
+                text-align: center;
+                margin-top: 0.5rem;
+                font-style: italic;
+                font-family: 'Times New Roman', serif;
+            }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 确保新罗马字体加载 -->
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全局字体强制设置为新罗马，确保一致性 */
+        body, h1, h2, h3, h4, h5, h6, p, a, ul, li, blockquote, footer, button {
+            font-family: 'Times New Roman', Georgia, serif !important;
+        }
+    </style>
 </head>
-<body class="bg-light text-dark font-sans">
+<body class="bg-light text-dark font-serif"> <!-- 改为font-serif -->
     <!-- Header with Navigation -->
     <header class="bg-primary text-white shadow-md sticky top-0 z-50 transition-all duration-300" id="main-header">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
@@ -106,6 +121,11 @@
                     <h2 class="text-2xl md:text-3xl font-bold text-primary">Introduction</h2>
                 </div>
                 <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                    <div class="mb-6">
+                        <img src="https://picsum.photos/id/180/1200/400" alt="Digital ecosystem visualization showing connections between technology, environment, and society" class="w-full h-auto rounded-lg shadow-md">
+                        <p class="img-caption">Digital ecosystems exist within and impact natural ecosystems, creating complex interdependencies</p>
+                    </div>
+                    
                     <p class="mb-4 text-lg leading-relaxed">
                         This portfolio weaves three interconnected strands of reflection, shaped by key texts, movements, and narratives from my MA programme. The first strand emerges from weekly engagements with <em>Anatomy of an AI System</em> (Crawford & Joler, 2018), challenging me to reposition AI as materially embedded infrastructure rather than abstract technology, while probing digital methodologies for climate equity.
                     </p>
@@ -131,11 +151,27 @@
                         AI is widely hailed as a critical tool for addressing climate change, from optimizing renewable energy grids to modeling deforestation (Sabeena, 2025). Yet this framing obscures a fundamental dualism: AI’s potential to advance sustainability is inseparable from its role as a driver of environmental harm.
                     </p>
                     
+                    <div class="grid md:grid-cols-2 gap-6 my-8">
+                        <div>
+                            <img src="https://picsum.photos/id/160/600/400" alt="Data center with renewable energy sources nearby" class="w-full h-auto rounded-lg shadow-md">
+                            <p class="img-caption">Data centers increasingly pair with renewable energy, yet remain resource-intensive</p>
+                        </div>
+                        <div>
+                            <img src="https://picsum.photos/id/119/600/400" alt="Rare earth mineral mining operation" class="w-full h-auto rounded-lg shadow-md">
+                            <p class="img-caption">Rare earth mineral extraction is essential for AI hardware production</p>
+                        </div>
+                    </div>
+
                     <div class="my-8 bg-neutral bg-opacity-30 rounded-lg p-6 border-l-4 border-secondary">
                         <blockquote class="text-lg italic text-dark">
                             "Artificial intelligence may assist us not only practically but also play an essential social role for individuals in advancing initiatives against a changing climate. Through learning algorithms such as machine learning or deep learning, artificial intelligence helps leaders develop long-term planning for global climate change, focusing appropriately on aspects such as social inequality, economic prosperity development, environmental protection, and sustainable resource planning."
                             <footer class="mt-2 text-sm text-primary">— Sabeena (2025, p. 390)</footer>
                         </blockquote>
+                    </div>
+
+                    <div class="mb-6">
+                        <img src="https://picsum.photos/id/183/1200/400" alt="Infographic showing AI's carbon footprint across its lifecycle" class="w-full h-auto rounded-lg shadow-md">
+                        <p class="img-caption">AI systems have significant carbon footprints throughout their lifecycle - from mineral extraction to operation</p>
                     </div>
 
                     <p class="mb-4 text-lg leading-relaxed">
@@ -159,6 +195,11 @@
                     <p class="mb-4 text-lg leading-relaxed">
                         The DHCC’s work has been transformative in reframing digital humanities as a site of environmental responsibility. Founded to address the “carbon burden” of digital research (Little et al., 2025), the coalition advocates for three core principles: minimizing energy consumption, prioritizing open and transparent practices, and centering climate justice in digital projects.
                     </p>
+
+                    <div class="mb-8">
+                        <img src="https://picsum.photos/id/169/1200/400" alt="Sustainable data center using renewable energy and efficient cooling" class="w-full h-auto rounded-lg shadow-md">
+                        <p class="img-caption">Sustainable digital infrastructure combines energy efficiency with renewable sources</p>
+                    </div>
 
                     <div class="grid md:grid-cols-3 gap-4 my-8">
                         <div class="bg-primary bg-opacity-10 rounded-lg p-5 text-center hover:shadow-md transition-shadow duration-300">
@@ -184,6 +225,17 @@
                         </div>
                     </div>
 
+                    <div class="grid md:grid-cols-2 gap-6 my-8">
+                        <div>
+                            <img src="https://picsum.photos/id/0/600/400" alt="Researchers collaborating on sustainable digital projects" class="w-full h-auto rounded-lg shadow-md">
+                            <p class="img-caption">Scholars increasingly collaborate on sustainable digital research practices</p>
+                        </div>
+                        <div>
+                            <img src="https://picsum.photos/id/2/600/400" alt="Carbon footprint calculation for digital projects" class="w-full h-auto rounded-lg shadow-md">
+                            <p class="img-caption">Measuring and reducing carbon footprints is central to DHCC principles</p>
+                        </div>
+                    </div>
+
                     <p class="mb-4 text-lg leading-relaxed">
                         For me, this meant confronting the environmental impact of my own scholarly work—from maintaining a GitHub page to storing research data on cloud servers. As Little et al. (2025) argue, even “small” digital practices (e.g., hosting websites, sharing large datasets) accumulate into significant carbon emissions when scaled across the discipline.
                     </p>
@@ -206,11 +258,27 @@
                         Aaron Swartz’s activism, as documented in <em>The Internet’s Own Boy</em>, redefined my understanding of open knowledge as a practice of justice. Swartz’s attempt to download millions of JSTOR articles (Lessig, 2004) was not merely a protest against paywalls but a demand for knowledge as a public good—one that should be accessible to all, regardless of ability to pay.
                     </p>
 
+                    <div class="mb-8">
+                        <img src="https://picsum.photos/id/24/1200/400" alt="Global knowledge access visualization showing unequal distribution" class="w-full h-auto rounded-lg shadow-md">
+                        <p class="img-caption">Open knowledge initiatives aim to address global inequalities in information access</p>
+                    </div>
+
                     <div class="my-8 bg-secondary bg-opacity-10 rounded-lg p-6 border-l-4 border-primary">
                         <blockquote class="text-lg italic text-dark">
                             "Digital ethics is deeply embedded within rhetorical contexts… how users participate online and through digital media has the potential to shape the norms, laws, and practices that will determine the future of the social web and digital data."
                             <footer class="mt-2 text-sm text-primary">— Reyman and Sparby (2020, p. 2)</footer>
                         </blockquote>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 my-8">
+                        <div>
+                            <img src="https://picsum.photos/id/48/600/400" alt="Open access publishing symbol with global connectivity lines" class="w-full h-auto rounded-lg shadow-md">
+                            <p class="img-caption">Open access reduces both financial and environmental barriers to knowledge</p>
+                        </div>
+                        <div>
+                            <img src="https://picsum.photos/id/20/600/400" alt="Comparison of physical book production vs digital distribution environmental impact" class="w-full h-auto rounded-lg shadow-md">
+                            <p class="img-caption">Digital open access can significantly reduce the environmental impact of knowledge dissemination</p>
+                        </div>
                     </div>
 
                     <p class="mb-4 text-lg leading-relaxed">
@@ -231,6 +299,11 @@
                     <h2 class="text-2xl md:text-3xl font-bold text-primary">Conclusion</h2>
                 </div>
                 <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                    <div class="mb-6">
+                        <img src="https://picsum.photos/id/118/1200/400" alt="Interconnected systems diagram showing technology, environment, and society" class="w-full h-auto rounded-lg shadow-md">
+                        <p class="img-caption">Responsible digital culture requires understanding the interconnectedness of technological, environmental, and social systems</p>
+                    </div>
+                    
                     <p class="mb-4 text-lg leading-relaxed">
                         This reflection has been shaped by a core insight: digital culture is inherently material. AI systems are not abstract algorithms but networks of extraction, labor, and energy; digital scholarship leaves carbon footprints that reverberate across planetary systems; open knowledge is not a neutral ideal but a material practice that shapes power and equity.
                     </p>
